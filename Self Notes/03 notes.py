@@ -79,3 +79,80 @@ if isTall:
     print("You are tall")
 else:
     print("You are not tall")
+
+
+monthConv = {
+    "Jan": "January",
+    "Feb": "Febuwary",
+    "Mar": "March",
+    "Apr": "April",
+    "May": "May"
+}
+
+def convMonth(m):
+    #return monthConv[m]
+    return monthConv.get(m, "No valid month")
+
+
+print(convMonth("Mar"))
+
+i = 1
+while i <= 10:
+    print(i)
+    i += 1
+
+i = 1
+for i in range(10):
+    print(i)
+
+for n in favNumbers:
+    print(n)
+
+
+#Guessing Game
+'''
+sWord = "word"
+guess = ""
+guesCount = 15
+while sWord != guess and guesCount >= 1:
+    guess = input(f"Guess the word, you have {guesCount} guesses remaing: ")
+    guesCount -= 1
+if guess == sWord:
+    print(f"You win with {guesCount} guesses remaining!")
+else:
+    print("You are out of guesses and have lost.")
+'''
+
+print(2**3)
+
+numberGrid = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+    [0]
+]
+print(numberGrid[1][1])
+
+for row in numberGrid:
+    for col in row:
+        print(col)
+
+def tranlate(p):
+    tranlation = ""
+    for l in p:
+        if l in "AEIOUaeiou":
+            if l.isupper():
+                tranlation = tranlation + "G"
+            else:
+                tranlation = tranlation + "g"
+        else:
+            tranlation = tranlation + l
+    return tranlation
+    
+print(tranlate(input("Enter a phrase: ")))
+
+try:
+    numberExample = int(input("Enter a number: "))
+    print(numberExample)
+except ValueError as e:
+    print(e)
